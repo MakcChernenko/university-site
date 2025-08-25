@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import styles from "./dnd.module.css";
+console.log("hello");
 
 // Типи характеристик
 type StatKey = "str" | "con" | "int" | "wis" | "dex" | "cha";

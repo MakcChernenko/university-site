@@ -1,6 +1,15 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: radial-gradient(
+    1200px 800px at 10% -10%,
+    #fce7f3 0%,
+    #e9d5ff 30%,
+    #dbeafe 60%,
+    #fff 100%
+  );
+  --card: #b96262ee;
+  --accent: #7c3aed;
+  --accent-2: #0ea5e9;
+  --text: #1f2937;
 }
 
 @media (prefers-color-scheme: dark) {
