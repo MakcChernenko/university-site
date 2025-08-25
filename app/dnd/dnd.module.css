@@ -1,6 +1,6 @@
 .page {
   min-height: 100dvh;
-  background: var(--bg);
+  /* background: var(--bg); */
   padding: 24px;
   color: var(--text);
   display: grid;
@@ -9,7 +9,9 @@
 
 .card {
   width: min(980px, 100%);
-  background: var(--card);
+  background: url("https://img.freepik.com/free-photo/wooden-floor-background_53876-88628.jpg?semt=ais_hybrid&w=740&q=80")
+    no-repeat center center;
+  background-size: cover;
   padding: 24px;
   border-radius: 20px;
   box-shadow: 0 12px 40px rgba(124, 58, 237, 0.15);

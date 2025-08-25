@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       "blizzard.org.ua",
       "www.mzk2.ru",
       "encrypted-tbn0.gstatic.com",
+      "img.freepik.com",
     ],
   },
 };
