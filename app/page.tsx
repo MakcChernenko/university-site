@@ -6,6 +6,7 @@ function Page() {
     <main>
       <Link href="/slider">Predmets</Link>
       <Link href="/dnd">DND</Link>
+      <Link href="/calculate">Calculate</Link>
     </main>
   );
 }
