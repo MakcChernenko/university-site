@@ -14,7 +14,7 @@ function ContactModal({ isOpen, onClose }: ContactModalProps) {
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <h2>Зв'язатися з шаманом</h2>
         <form
-          action="https://formsubmit.co/andrejcepeluk7@gmail.com"
+          action="https://formsubmit.co/makcvoin09@gmail.com"
           method="POST"
           className={styles.form}
         >
