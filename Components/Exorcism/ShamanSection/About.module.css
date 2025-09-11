@@ -1,0 +1,122 @@
+/* Загальні стилі */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #4b0082, #2e0854);
+  color: #fff;
+  border-radius: 0 0 32px 32px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 12px;
+  color: #e0c3ff;
+}
+
+.about,
+.certs,
+.legends,
+.cta {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fdfdfd;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about h2,
+.certs h2,
+.legends h2,
+.cta h2 {
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  color: #4b0082;
+}
+
+.about ul,
+.certs ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.cards article {
+  background: #fff;
+  border: 2px solid #e8d7ff;
+  border-radius: 12px;
+  padding: 16px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cards article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cards h3 {
+  margin-bottom: 8px;
+  color: #5c2eb8;
+  font-size: 1.2rem;
+}
+
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, #5c2eb8, #8a2be2);
+  color: #fff;
+}
+
+.cta p {
+  margin: 12px 0 20px;
+  font-size: 1.1rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #fff;
+  color: #5c2eb8;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.ctaButton:hover {
+  background: #e0c3ff;
+  color: #2e0854;
+}
+
+/* 📱 Адаптивність */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .about,
+  .certs,
+  .legends,
+  .cta {
+    margin: 20px 12px;
+    padding: 16px;
+  }
+}

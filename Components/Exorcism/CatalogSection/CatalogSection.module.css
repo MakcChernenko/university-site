@@ -1,0 +1,19 @@
+.catalog {
+  padding: 30px;
+  background: #322b33;
+}
+.catalog h2 {
+  text-align: center;
+  color: purple;
+}
+.catalog ul {
+  list-style: none;
+  padding: 0;
+}
+.catalog li {
+  margin: 0 auto;
+  margin: 15px 0;
+}
+.catalog a {
+  color: brown;
+}

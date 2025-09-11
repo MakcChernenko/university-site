@@ -1,0 +1,21 @@
+.header {
+  background: purple;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.header ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header a {
+  color: yellow;
+  text-decoration: none;
+}
+.header a:hover {
+  text-decoration: underline;
+}
