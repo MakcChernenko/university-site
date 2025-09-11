@@ -59,9 +59,6 @@ export default function ChepeliukPage() {
       <section className={styles.cta}>
         <h2>🔮 Хочеш особисту консультацію?</h2>
         <p>Замов ритуал прямо зараз, поки Чепелюк не пішов у запій.</p>
-        <Link href="/catalog" className={styles.ctaButton}>
-          Замовити ритуал
-        </Link>
       </section>
     </div>
   );

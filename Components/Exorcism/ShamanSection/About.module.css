@@ -2,7 +2,7 @@
   text-align: center;
   padding: 60px 20px;
   background: linear-gradient(135deg, #4b0082, #2e0854);
-  color: #a14949;
+  color: #241717;
   border-radius: 0 0 32px 32px;
 }
 
@@ -15,7 +15,7 @@
   font-size: 1.2rem;
   font-style: italic;
   margin-bottom: 12px;
-  color: #e0c3ff;
+  color: #190d25;
 }
 
 .about,
@@ -25,7 +25,7 @@
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  background: #612b2b;
+  background: #251717;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -36,7 +36,7 @@
 .cta h2 {
   margin-bottom: 16px;
   font-size: 1.8rem;
-  color: #4b0082;
+  color: #ddd0d0;
 }
 
 .about ul,
@@ -52,7 +52,7 @@
 }
 
 .cards article {
-  background: #7a2424;
+  background: #3a1616;
   border: 2px solid #e8d7ff;
   border-radius: 12px;
   padding: 16px;
