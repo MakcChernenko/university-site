@@ -1,9 +1,8 @@
-/* Загальні стилі */
 .hero {
   text-align: center;
   padding: 60px 20px;
   background: linear-gradient(135deg, #4b0082, #2e0854);
-  color: #fff;
+  color: #a14949;
   border-radius: 0 0 32px 32px;
 }
 
@@ -26,7 +25,7 @@
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  background: #fdfdfd;
+  background: #612b2b;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -53,7 +52,7 @@
 }
 
 .cards article {
-  background: #fff;
+  background: #7a2424;
   border: 2px solid #e8d7ff;
   border-radius: 12px;
   padding: 16px;
