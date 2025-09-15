@@ -77,7 +77,10 @@ export default function GraphBuilder() {
   // зміна даних у таблиці
   const handleChange = (index: number, field: keyof Edge, value: string) => {
     const newEdges = [...edges];
-    (newEdges[index] as any)[field] = Number(value);
+    newEdges[index] = {
+      ...newEdges[index],
+      [field]: Number(value),
+    };
     setEdges(newEdges);
   };
 
