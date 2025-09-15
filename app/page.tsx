@@ -8,6 +8,7 @@ function Page() {
       <Link href="/dnd">DND</Link>
       <Link href="/calculate">Calculate</Link>
       <Link href="/exorcism">Гей Андрій</Link>
+      <Link href="/drawGraf">редактор графів</Link>
     </main>
   );
 }
