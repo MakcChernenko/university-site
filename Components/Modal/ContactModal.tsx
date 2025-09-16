@@ -12,14 +12,14 @@ function ContactModal({ isOpen, onClose }: ContactModalProps) {
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <h2>Зв'язатися з шаманом</h2>
+        <h2>{"Зв'язатися з шаманом"}</h2>
         <form
           action="https://formsubmit.co/172e2f9fe90867faa4d3da8fa85b40c1"
           method="POST"
           className={styles.form}
         >
           <label>
-            Ім'я
+            {"ім'я"}
             <input type="text" name="name" required />
           </label>
           <label>

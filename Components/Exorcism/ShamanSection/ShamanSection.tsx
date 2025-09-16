@@ -1,5 +1,4 @@
 import styles from "./About.module.css";
-import Link from "next/link";
 
 export default function ChepeliukPage() {
   return (
@@ -14,7 +13,7 @@ export default function ChepeliukPage() {
       <section className={styles.about}>
         <h2>Про шамана</h2>
         <p>
-          Ім'я: <b>Чепелюк Андрій Хуїло</b> (для друзів просто Чах). Досвід
+          {"Ім'я"}: <b>Чепелюк Андрій Хуїло</b> (для друзів просто Чах). Досвід
           роботи: <b>18+ років</b> у сфері:
         </p>
         <ul>
