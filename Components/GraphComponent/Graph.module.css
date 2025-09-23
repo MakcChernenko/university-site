@@ -1,0 +1,134 @@
+.container {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eaeaea;
+  background-color: #111; /* темний фон для всієї сторінки */
+  min-height: 100vh;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.inputSection {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputSection label {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
+
+.inputSection input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #1c1c1c;
+  color: #fff;
+  outline: none;
+}
+
+.inputSection input:focus {
+  border-color: #0070f3;
+}
+
+.tableContainer {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 700px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.graphTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.graphTable th {
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem;
+}
+
+.graphTable td {
+  border-top: 1px solid #333;
+  padding: 0.5rem;
+}
+
+.graphTable input {
+  width: 80%;
+  padding: 0.3rem;
+  text-align: center;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(135deg, #0070f3, #005bb5);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #3291ff, #0070f3);
+  transform: translateY(-2px);
+}
+
+.svgContainer {
+  border: 1px solid #333;
+  margin-top: 2rem;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* стилі для графа */
+.node {
+  stroke: #fff;
+  stroke-width: 2px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.node:hover {
+  transform: scale(1.2);
+  fill: #4fd1c5;
+}
+
+.link {
+  stroke: #aaa;
+  stroke-opacity: 0.7;
+}
+
+.linkText {
+  font-size: 12px;
+  fill: #ddd;
+  pointer-events: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+}
