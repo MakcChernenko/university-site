@@ -8,6 +8,8 @@ interface Node extends d3.SimulationNodeDatum {
   id: string;
   x?: number;
   y?: number;
+  fx?: number | null;
+  fy?: number | null;
 }
 
 interface Link extends d3.SimulationLinkDatum<Node> {
@@ -15,6 +17,8 @@ interface Link extends d3.SimulationLinkDatum<Node> {
   target: Node | string;
   weight: number;
   linkNumber: number;
+  dx?: number; // зсув по X для підпису
+  dy?: number; // зсув по Y для підпису
 }
 
 interface GraphProps {
@@ -30,7 +34,6 @@ const GraphComponent: React.FC<GraphProps> = ({ nodes, links }) => {
   useEffect(() => {
     if (!svgRef.current) return;
 
-    // очистка перед новим рендером
     d3.select(svgRef.current).selectAll("*").remove();
 
     const svg = d3
@@ -68,10 +71,9 @@ const GraphComponent: React.FC<GraphProps> = ({ nodes, links }) => {
       .data(links)
       .enter()
       .append("line")
-      .attr("stroke-width", 2)
-      .attr("class", "link");
+      .attr("stroke-width", 2);
 
-    // підписи ребер
+    // підписи ребер (тепер draggable)
     const linkText = svg
       .append("g")
       .attr("class", "link-labels")
@@ -82,7 +84,20 @@ const GraphComponent: React.FC<GraphProps> = ({ nodes, links }) => {
       .text((d) => `${d.linkNumber} (${d.weight})`)
       .attr("font-size", "12px")
       .attr("fill", "white")
-      .attr("dy", -5);
+      .style("cursor", "move")
+      .each(function (d) {
+        d.dx = 0;
+        d.dy = 0;
+      })
+      .call(
+        d3.drag<SVGTextElement, Link>().on("drag", function (event, d) {
+          d.dx = (d.dx ?? 0) + event.dx;
+          d.dy = (d.dy ?? 0) + event.dy;
+          d3.select(this)
+            .attr("x", +d3.select(this).attr("x") + event.dx)
+            .attr("y", +d3.select(this).attr("y") + event.dy);
+        })
+      );
 
     // вузли
     const node = svg
@@ -94,7 +109,25 @@ const GraphComponent: React.FC<GraphProps> = ({ nodes, links }) => {
       .append("circle")
       .attr("r", 10)
       .attr("fill", "#69b3a2")
-      .attr("class", "node");
+      .style("cursor", "grab")
+      .call(
+        d3
+          .drag<SVGCircleElement, Node>()
+          .on("start", (event, d) => {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+          })
+          .on("drag", (event, d) => {
+            d.fx = event.x;
+            d.fy = event.y;
+          })
+          .on("end", (event, d) => {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null; // якщо хочеш щоб вершина знову "плавала", залишаємо null
+            d.fy = null;
+          })
+      );
 
     // підписи вузлів
     const nodeLabel = svg
@@ -111,7 +144,6 @@ const GraphComponent: React.FC<GraphProps> = ({ nodes, links }) => {
       .attr("dy", "0.35em")
       .style("pointer-events", "none");
 
-    // оновлення позицій
     simulation.on("tick", () => {
       link
         .attr("x1", (d) =>
@@ -128,20 +160,18 @@ const GraphComponent: React.FC<GraphProps> = ({ nodes, links }) => {
         );
 
       linkText
-        .attr(
-          "x",
-          (d) =>
-            ((typeof d.source !== "string" ? (d.source.x ?? 0) : 0) +
-              (typeof d.target !== "string" ? (d.target.x ?? 0) : 0)) /
-            2
-        )
-        .attr(
-          "y",
-          (d) =>
-            ((typeof d.source !== "string" ? (d.source.y ?? 0) : 0) +
-              (typeof d.target !== "string" ? (d.target.y ?? 0) : 0)) /
-            2
-        );
+        .attr("x", (d) => {
+          const x1 = typeof d.source !== "string" ? (d.source.x ?? 0) : 0;
+          const x2 = typeof d.target !== "string" ? (d.target.x ?? 0) : 0;
+          const mx = (x1 + x2) / 2;
+          return mx + (d.dx ?? 0);
+        })
+        .attr("y", (d) => {
+          const y1 = typeof d.source !== "string" ? (d.source.y ?? 0) : 0;
+          const y2 = typeof d.target !== "string" ? (d.target.y ?? 0) : 0;
+          const my = (y1 + y2) / 2;
+          return my + (d.dy ?? 0);
+        });
 
       node.attr("cx", (d) => d.x ?? 0).attr("cy", (d) => d.y ?? 0);
 
