@@ -26,7 +26,9 @@
     --button-secondary-hover: #1a1a1a;
   }
 }
-
+.link {
+  cursor: default;
+}
 .main {
   display: flex;
   flex-direction: column;

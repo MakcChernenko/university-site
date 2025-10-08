@@ -1,0 +1,56 @@
+.tutankhamunPage {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(https://s7.stc.all.kpcdn.net/woman/wp-content/uploads/2023/10/sonnik-28-12-960-10.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  padding-top: 100px;
+}
+.hero h1 {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.1em;
+  color: #ffffff;
+}
+.hero p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 1.3;
+  color: var(--global-palette3);
+}
+
+.heroConsult {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 1.5;
+  color: var(--global-palette4);
+}
+
+.heroPresentation {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 60%;
+}
+.heroLinkContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.heroLink {
+  background-color: #a08262;
+  fill: #ffffff;
+  color: #ffffff;
+  border-radius: 5px 5px 5px 5px;
+  padding: 18px 40px 18px 40px;
+}
