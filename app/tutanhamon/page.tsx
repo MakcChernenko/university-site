@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./Tutankhamun.module.css";
 import Link from "next/link";
+import TutanhamonFooter from "@/Components/tutanhamon/TutanhamonFooter";
 
 function TutankhamunPage() {
   return (
@@ -32,7 +33,9 @@ function TutankhamunPage() {
           </div>
         </section>
       </main>
-      <footer>Підвал</footer>
+      <footer>
+        <TutanhamonFooter />
+      </footer>
     </div>
   );
 }
