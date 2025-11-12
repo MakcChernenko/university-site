@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://masterpiecer-images.s3.yandex.net/be11528275c311ee8dccf6c574779d3e:upscaled",
+        url: "https://7snov.com.ua/wp-content/uploads/2020/04/do-chogo-snit-sya-neb-zhchik-v-trun-bachiti-v-dkrit-zakrit-abo-chervon-domov-ni-2.jpg",
         width: 1200,
         height: 630,
         alt: "Похоронний дім Волдеморт — ритуальні послуги",
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

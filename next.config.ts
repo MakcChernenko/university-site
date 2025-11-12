@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       "www.mzk2.ru",
       "encrypted-tbn0.gstatic.com",
       "img.freepik.com",
-      "masterpiecer-images.s3.yandex.net",
+      "7snov.com.ua",
     ],
   },
 };
