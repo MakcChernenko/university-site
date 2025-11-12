@@ -6,7 +6,7 @@ import TutanhamonFooter from "@/Components/tutanhamon/TutanhamonFooter";
 function TutankhamunPage() {
   return (
     <div className={css.tutankhamunPage}>
-      <header>Тут шапка</header>
+      <header>Це навчальний сайт</header>
       <main>
         <section className={css.hero}>
           <div className={css.heroPresentation}>
