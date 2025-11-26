@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 50%;
+  width: 45%;
 }
 .heroLinkContainer {
   display: flex;
