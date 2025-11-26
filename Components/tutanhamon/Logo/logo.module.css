@@ -1,0 +1,62 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "Georgia", serif;
+  color: #d4b98a;
+  text-decoration: none;
+}
+
+.logoEmblem {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #d4b98a;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Лівий вінок */
+.logoEmblem::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  width: 40px;
+  height: 80px;
+  border-radius: 50%;
+  border-left: 4px solid #d4b98a;
+  transform: rotate(-15deg);
+}
+
+/* Правий вінок */
+.logoEmblem::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  width: 40px;
+  height: 80px;
+  border-radius: 50%;
+  border-right: 4px solid #d4b98a;
+  transform: rotate(15deg);
+}
+
+.initials {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logoText h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logoText p {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
