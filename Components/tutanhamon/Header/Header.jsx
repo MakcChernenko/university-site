@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Logo } from "../logo/logo";
+import { Logo } from "../Logo/logo";
 import css from "./Header.module.css";
 
 export const Header = () => {
