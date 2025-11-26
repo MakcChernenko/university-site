@@ -11,7 +11,7 @@
     url(https://s7.stc.all.kpcdn.net/woman/wp-content/uploads/2023/10/sonnik-28-12-960-10.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: calc(50% + 300px) center;
+  background-position: calc(50% + 300px) 0px;
   /* background-position: center center; */
   width: 100%;
   padding-top: 400px;
