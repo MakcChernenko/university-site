@@ -16,6 +16,7 @@ export default function TutanhamonFooter() {
           <Link className={styles.link} href="/tutanhamon/questionnaire">
             Анкета
           </Link>
+          <a href="/baner.html">Банер</a>
         </div>
 
         <div className={styles.middle}>

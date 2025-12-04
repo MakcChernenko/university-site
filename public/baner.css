@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.banner {
+  width: 900px;
+  height: 400px;
+  position: relative;
+  background: url("/fon.jpg") center/cover no-repeat;
+  border: 3px solid #0a9667aa;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 40px;
+}
+.contacts a {
+  color: #fff;
+}
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.description {
+  max-width: 500px;
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.contacts {
+  font-size: 16px;
+  opacity: 0.9;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "Georgia", serif;
+  color: #d4b98a;
+  text-decoration: none;
+}
+
+.logoEmblem {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #d4b98a;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Лівий вінок */
+.logoEmblem::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  width: 40px;
+  height: 80px;
+  border-radius: 50%;
+  border-left: 4px solid #d4b98a;
+  transform: rotate(-15deg);
+}
+
+/* Правий вінок */
+.logoEmblem::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  width: 40px;
+  height: 80px;
+  border-radius: 50%;
+  border-right: 4px solid #d4b98a;
+  transform: rotate(15deg);
+}
+
+.initials {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logoText h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logoText p {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
