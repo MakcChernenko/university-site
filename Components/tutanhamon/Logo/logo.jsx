@@ -10,7 +10,7 @@ export const Logo = () => {
         <span className={css.initials}>VM</span>
       </div>
       <div className={css.logoText}>
-        <p>ВОЛДЕМОРТ</p>
+        <p>СТАСІКА-ПІДОРАСІКА</p>
         <p>похоронний дім</p>
       </div>
     </a>

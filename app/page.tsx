@@ -21,7 +21,7 @@ function Page() {
         Редакторграфів
       </Link>
       <Link className={css.link} href="/tutanhamon">
-        Гроби
+        Красиві Гроби
       </Link>
     </main>
   );
